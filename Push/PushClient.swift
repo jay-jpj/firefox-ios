@@ -6,7 +6,8 @@ import Foundation
 import Shared
 import SwiftyJSON
 
-protocol PushClient {
+protocol PushClient
+{
     func register(_ apnsToken: String,
                   completion: @escaping (PushRegistration?) -> Void)
 
@@ -14,7 +15,8 @@ protocol PushClient {
                     completion: @escaping () -> Void)
 }
 
-public class PushClientImplementation: PushClient {
+public class PushClientImplementation: PushClient
+{
 
     private let log = Logger.browserLogger
 
@@ -41,7 +43,8 @@ public class PushClientImplementation: PushClient {
 }
 
 // MARK: - PushClient
-public extension PushClientImplementation {
+public extension PushClientImplementation
+{
     func register(_ apnsToken: String,
                   completion: @escaping (PushRegistration?) -> Void) {
 
